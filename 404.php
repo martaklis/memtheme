@@ -1,18 +1,12 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
  * @package MEM_Theme
  */
 
 get_header(); ?>
-
-<section class="error-404 not-found">
-				<header class="page-header">
-					<h1><?php esc_html_e( 'Błąd 404!', 'MEM_Theme' ); ?></h1>
-				</header><!-- .page-header -->
+<main>
+ <div class="col-10 col-md-6 offset-1 mt-3 mb-4 pl-md-0 w-100">
+					<h1 class="error"><?php esc_html_e( 'Błąd 404!', 'mem-theme' ); ?></h1>
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'Wygląda na to, że strona, której szukasz, nie istnieje. Skorzystaj z wyszukiwarki lub odwiedź jedną z proponowanych przez nas stron' ); ?></p>
@@ -23,8 +17,9 @@ get_header(); ?>
 
 					?>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+</div>
+		</main>
+<?php 
+get_sidebar();
+get_footer(); ?>
