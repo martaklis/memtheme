@@ -1,11 +1,12 @@
 <?php
 /**
- * The main template file
  * @package MEM_Theme
  */
 
 get_header(); ?>
-	<section id="primary" class="content-area col-sm-12 col-md-12 col-lg-8">
+<div class="container">
+ <div class="row">
+     <div class="col-12 col-lg-8 mt-3 mb-4 pl-md-0 w-100">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -13,7 +14,7 @@ get_header(); ?>
 
 			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<h3><?php single_post_title(); ?></h3>
 				</header>
 
 			<?php
@@ -31,17 +32,14 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
 		</main><!-- #main -->
-	</section><!-- #primary -->
-
+	</div><!-- #primary -->
 <?php
 get_sidebar();
 get_footer();
+?>
